@@ -12,6 +12,13 @@ module.exports = function(grunt) {
         '!assets/js/scripts.min.js'
       ]
     },
+    autoprefixer: {
+        dist: {
+            files: {
+                'build/style.css': 'style.css'
+            }
+        }
+    },
     sass: {
       dist: {
         options: {
@@ -70,7 +77,7 @@ module.exports = function(grunt) {
           'assets/sass/*.scss',
           'assets/sass/bootstrap/*.scss'
         ],
-        tasks: ['sass', 'version']
+        tasks: ['sass', 'version', 'autoprefixer']
       },
       js: {
         files: [
@@ -82,7 +89,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.min.css',
@@ -107,6 +114,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Register tasks
   grunt.registerTask('default', [

@@ -18,17 +18,30 @@
 
 // Use this variable to set up the common and page specific functions. If you 
 // rename this variable, you will also need to rename the namespace below.
+
 var Roots = {
   // All pages
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+
     }
   },
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+
+
+      $('#showApplication').click( function() {
+        // $('.application-form').addClass('animated bounceInLeft');
+        $('.application-form').slideDown('medium');
+      });
+
+      
+      $('.sy-jumbo-title').fitText(0.6, {maxFontSize:'170px'});
+      $('.sy-title').fitText({maxFontSize:'80px'});
+
     }
   },
   // About us page, note the change from about-us to about_us.

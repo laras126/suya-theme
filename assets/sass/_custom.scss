@@ -1,0 +1,35 @@
+
+// Overriding Bootstrap variables
+
+$brand-dgrey: 			#494c55;
+$brand-red: 			#e72c37;
+$brand-white: 			#fdfdfd;
+$brand-blue: 			#0caabb;
+$brand-mgrey: 			#64666e;
+$brand-green: 	        #0DFF8F;
+
+$brand-primary:         #428bca !default;
+$brand-success:         #0DFF8F;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+
+// Fonts, baby
+
+$font-family-sans-serif:  "brandon-grotesque", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       "refrigerator-deluxe", "Times New Roman", Times, serif !default;
+
+$headings-font-family:    $font-family-sans-serif;
+
+
+// Body
+
+$body-bg:               $brand-dgrey;
+$text-color:            $brand-dgrey;
+$font-size-base:        24px;
+
+
+// Adjust max size
+
+// $container-lg: 			960px;

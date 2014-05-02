@@ -3,29 +3,121 @@
  */
 
 $bootstrap-sass-asset-helper: false;
+@import "custom";
+@import "mixins";
 @import "bootstrap/bootstrap";
+
+@import "forms";
+@import "animate";
+
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+body { 
 
+   // background-color: $brand-success;
+
+   // @media (min-width: $screen-sm-min) {
+      // background: url(../img/nyc_md.jpg) no-repeat center center fixed;
+
+   // }
+   padding-top: $padding-large-vertical*2;
+   @media (min-width: $screen-lg-min) {
+      background-image: url(../img/comp_lg.JPG);  
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+   }
+
+}
+
+hr {
+   border-top: 4px solid $gray-lighter;
+   margin: 40px;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, .btn {
+   text-transform: uppercase;
+   font-weight: 700;
+   text-align: center;
+}
+
+.sy-title, .sy-tag {
+   @include sy-shadow($brand-white, $brand-dgrey, 1);
+}
+
+.sy-title {
+   margin-top: $font-size-h1;
+}
+
+.sy-section .sy-tag {
+   @include sy-shadow($brand-dgrey, $brand-white, 0);  
+}
+
+.sy-jumbo-title {
+   @include sy-shadow($brand-dgrey, $brand-white, 2);  
+}
+
+.sy-tag {
+   font-size: $font-size-h3;
+}
 
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
-.banner { }
-
+.banner { 
+   // Hiding until we have more pages and need it
+   display: none;
+}
 
 
 /* ==========================================================================
    Content
    ========================================================================== */
 
-.content { }
+.container {
+   padding: 0;
+}
+
+.content {
+   
+}
+
+.sy-section {
+   background: $brand-white;
+   padding: $padding-large-vertical*2;
+   margin-bottom: $padding-large-vertical*3;
+   box-shadow: 4px 3px 0px $brand-blue, 
+               9px 8px 0px rgba(0,0,0,0.15);
+   border-radius: 4px;
+}
+
+.sy-icon {
+   font-size: $font-size-h1*2;
+   @include sy-shadow($brand-dgrey, $brand-white, 1);
+}
+
+// Why you overflow, row?
+.row {
+   margin: 0;
+}
+
+// Splash page
+
+.text-success {
+   color: darken($brand-green, 10%);
+}
+
+
+
 
 
 
@@ -84,8 +176,34 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: $screen-sm-min) { }
+@media (min-width: $screen-sm-min) { 
 
-@media (min-width: $screen-md-min) { }
+   // Overriding grid slightly to have space
+   // between boxes
+   .sy-half {
+      width: 48%;
+
+      &:last-child {
+         margin-left: 15px;
+         float: right;
+      }
+   }
+
+   .sy-third {
+      width: 32%;
+      margin-left: 15px;
+      &:first-child {
+         margin-left: 0;
+         // float: right;
+      }  
+   }
+   
+}
+
+@media (min-width: $screen-md-min) { 
+   .sy-half {
+         padding: $font-size-h1;
+   }
+}
 
 @media (min-width: $screen-lg-min) { }

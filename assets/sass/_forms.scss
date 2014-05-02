@@ -1,0 +1,90 @@
+
+// TODO: Make dis work
+input:focus { 
+    outline: none; 
+}
+
+.btn {
+    box-shadow: 6px 5px 0px rgba(0,0,0,0.15);
+    text-shadow: 2px 1px 0px rgba(0,0,0,0.15);
+    position: relative;
+    @include transition(all 0.2s);
+    font-size: $font-size-h1;
+
+    &:active {
+        box-shadow: 3px 2px 0px rgba(0,0,0,0.3);
+    }
+}
+
+.application-form {
+    display: none;
+}
+
+.gform_wrapper {
+
+    ul {
+        @extend .list-unstyled;
+    }
+
+    li {
+        @extend .form-group;
+    }
+
+    form {
+        margin-bottom: 0;
+    }
+
+    .gfield_required {
+        padding-left: 1px;
+        color: $state-danger-text;
+    }
+
+    .gfield_label {
+        font-weight: 100;
+    }
+}
+
+.ginput_container {
+
+    input,
+    select,
+    textarea {
+        @extend .form-control;
+        padding: $padding-large-vertical;
+    }
+
+    textarea {
+      height: auto;
+    }
+}
+
+.gform_button {
+  @extend .btn;
+  @extend .btn-warning;
+}
+
+.gform_wrapper .gfield_error {
+
+    .gfield_label {
+        color: $state-danger-text;
+    }
+
+    input,
+    select,
+    textarea {
+        border-color: $alert-danger-border;
+        background-color: $alert-danger-bg;
+        color: $alert-danger-text;
+        @include form-control-focus( $alert-danger-text );
+    }
+}
+
+.validation_error {
+    @extend .alert;
+    @extend .alert-danger;
+}
+
+#gforms_confirmation_message {
+    @extend .alert;
+    @extend .alert-success;
+}
