@@ -5,7 +5,7 @@ while($recent->have_posts()) : $recent->the_post();
 ?>
 	<header class="sy-section text-center">
 		<p><?php the_field('above_title'); ?></p>
-		<h1 class="sy-jumbo-title">Startup your <br><span class="text-success">Awesome</span></h1>
+		<h1 class="sy-jumbo-title">Startup<br>your<br><span class="text-success">Awesome</span></h1>
 		<hr>
 		<h4><?php the_field('below_title'); ?></h4>
 		<hr>

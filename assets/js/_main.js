@@ -39,7 +39,7 @@ var Roots = {
       });
 
       
-      $('.sy-jumbo-title').fitText(0.6, {maxFontSize:'170px'});
+      $('.sy-jumbo-title').fitText(0.6, {maxFontSize:'140px'});
       $('.sy-title').fitText({maxFontSize:'80px'});
 
     }
