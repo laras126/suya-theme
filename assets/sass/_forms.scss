@@ -13,6 +13,8 @@ input:focus {
 
     &:active {
         box-shadow: 3px 2px 0px rgba(0,0,0,0.3);
+        top: 3px;
+        left: 2px;
     }
 }
 
@@ -39,14 +41,29 @@ input:focus {
         color: $state-danger-text;
     }
 
-    .gfield_label {
-        font-weight: 100;
+    .gfield_label, .gfield_checkbox li label, .gfield_radio li label {
+        font-weight: 100 !important;
     }
+
+}
+
+.gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio], .gform_wrapper.gf_browser_safari .gfield_checkbox li input {
+        position: relative;
+        top: -4px;
+        margin-right: 6px;
+    }
+
+.gform_wrapper .description, .gform_wrapper .gfield_description, .gform_wrapper .gsection_description {
+        font-size: $font-size-base/1.5 !important;
+        color: $gray !important;
+        font-family: $font-family-sans-serif !important;
 }
 
 .ginput_container {
 
-    input,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
     select,
     textarea {
         @extend .form-control;
@@ -69,7 +86,9 @@ input:focus {
         color: $state-danger-text;
     }
 
-    input,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
     select,
     textarea {
         border-color: $alert-danger-border;
