@@ -6,8 +6,8 @@
 $recent = new WP_Query("pagename=testimonials"); 
 while($recent->have_posts()) : $recent->the_post();?>
 
-<section>
-	<h1 class="sy-title"><?php the_title(); ?></h1>
+<footer>
+	<h1 class="sy-title">Sounds good, right?</h1>
 	<p class="sy-tag text-center">
 		<?php the_field('testimonial_tagline'); ?>
 	</p>
