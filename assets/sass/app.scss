@@ -95,7 +95,7 @@ h1, h2, h3, h4, .btn {
 }
 
 .sy-icon {
-   font-size: $font-size-h1*2;
+   font-size: $font-size-h1*2.5;
    @include sy-shadow($brand-dgrey, $brand-white, 1);
 }
 
@@ -170,7 +170,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: $screen-sm-min) { 
+@media (min-width: $screen-md-min) { 
 
    // Overriding grid slightly to have space
    // between boxes
@@ -184,12 +184,14 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
 
    .sy-third {
+      float: left;
       width: 32%;
       margin-left: 15px;
+
       &:first-child {
          margin-left: 0;
          // float: right;
-      }  
+      } 
    }
    
 }
@@ -197,6 +199,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 @media (min-width: $screen-md-min) { 
    .sy-half {
          padding: $font-size-h1;
+   }
+   .sy-third {
+         padding: $font-size-h3;
    }
 }
 
