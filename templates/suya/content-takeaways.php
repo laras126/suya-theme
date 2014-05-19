@@ -1,25 +1,23 @@
 
-<?php 
+<?php
 
 // Takeaways
 
-$tk_id = get_ID_by_title('Takeaways');
-$tk_page = get_post($tk_id);
-
-?>
+$recent = new WP_Query("pagename=takeaways"); 
+while($recent->have_posts()) : $recent->the_post();?>
 
 <section class="sy--takeaways">
-	<h1 class="sy-title"><?php echo $tk_page->post_title; ?></h1>
+	<h1 class="sy-title"><?php the_field('post_title'); ?></h1>
 	<p class="sy-tag text-center">
-		<?php echo $tk_page->takeaway_tagline; ?>
+		<?php the_field('takeaway_tagline'); ?>
 	</p>
 	<div class="row">
 		<div class="col-sm-4 sy-section sy-third">
 			<div class="text-center sy-icon">
-				<i class="fa <?php echo $tk_page->takeaway_left_icon; ?>"></i>
+				<i class="fa <?php the_field('takeaway_left_icon'); ?>"></i>
 			</div>
-			<h4><?php echo $tk_page->takeaway_left_title; ?></h4>
-			<p><?php echo $tk_page->takeaway_left_blurb; ?></p>
+			<h4><?php the_field('takeaway_left_title'); ?></h4>
+			<p><?php the_field('takeaway_left_blurb'); ?></p>
 		</div>
 		<div class="col-sm-4 sy-section sy-third">
 			<div class="text-center sy-icon">
@@ -36,8 +34,8 @@ $tk_page = get_post($tk_id);
 			<p><?php the_field('takeaway_right_blurb'); ?></p>
 		</div>
 	</div>
+	<?php edit_post_link(); ?>
 </section>
 
 
-
-
+<?php endwhile; ?>

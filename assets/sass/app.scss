@@ -17,12 +17,6 @@ $bootstrap-sass-asset-helper: false;
 
 body { 
 
-   // background-color: $brand-success;
-
-   // @media (min-width: $screen-sm-min) {
-      // background: url(../img/nyc_md.jpg) no-repeat center center fixed;
-
-   // }
    padding-top: $padding-large-vertical*2;
    @media (min-width: $screen-lg-min) {
       background-image: url(../img/comp_lg.JPG);  

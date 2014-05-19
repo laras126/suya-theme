@@ -21,6 +21,6 @@ while($recent->have_posts()) : $recent->the_post();?>
 	</div>
 
 	<?php edit_post_link(); ?>
-</section>
+</footer>
 
 <?php endwhile; ?>
