@@ -15,8 +15,15 @@ $bootstrap-sass-asset-helper: false;
    Base
    ========================================================================== */
 
-body { 
+html {
+   font-size: 16px;
+   @media (min-width: $screen-sm-min) {
+      font-size: 24px;
+   }
 
+}
+
+body { 
    padding-top: $padding-large-vertical*2;
    @media (min-width: $screen-lg-min) {
       background-image: url(../img/comp_lg.JPG);  
@@ -170,10 +177,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: $screen-md-min) { 
-
-   // Overriding grid slightly to have space
-   // between boxes
+@media (min-width: $screen-sm-min) { 
    .sy-half {
       width: 48%;
 
@@ -182,6 +186,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          float: right;
       }
    }
+}
+
+@media (min-width: $screen-md-min) { 
+
+   // Overriding grid slightly to have space
+   // between boxes
+
 
    .sy-third {
       float: left;
@@ -193,10 +204,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          // float: right;
       } 
    }
-   
-}
 
-@media (min-width: $screen-md-min) { 
    .sy-half {
          padding: $font-size-h1;
    }

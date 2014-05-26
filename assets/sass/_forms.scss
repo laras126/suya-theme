@@ -10,6 +10,7 @@ input:focus {
     position: relative;
     @include transition(all 0.2s);
     font-size: $font-size-h1;
+    white-space: normal;
 
     &:active {
         box-shadow: 3px 2px 0px rgba(0,0,0,0.3);
